@@ -1,5 +1,5 @@
 ---
-title: Jekyll Serif Theme
+title: "주식회사 성지테크"
 layout: home
 description: Jekyll Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
 intro_image: "images/illustrations/pointing.svg"
