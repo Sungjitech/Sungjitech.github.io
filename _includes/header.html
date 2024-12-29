@@ -1,12 +1,46 @@
 <div class='header'>
   <div class="container">
     <div class="logo">
-      <a href="{{ site.baseurl }}"><img width="{{ site.logo.desktop_width }}" height="{{ site.logo.desktop_height }}" alt="{{ site.title }}" src="{{ site.logo.desktop | relative_url }}" /></a>
+      <a href="{{ site.baseurl }}">
+        <img alt="{{ site.title }}" src="{{ site.logo.desktop | relative_url }}" class="logo-image" />
+      </a>
     </div>
     <div class="logo-mobile">
-      <a href="{{ site.baseurl }}"><img width="{{ site.logo.mobile_width }}" height="{{ site.logo.mobile_height }}" alt="{{ site.title }}" src="{{ site.logo.mobile | relative_url }}" /></a>
+      <a href="{{ site.baseurl }}">
+        <img alt="{{ site.title }}" src="{{ site.logo.mobile | relative_url }}" class="logo-image-mobile" />
+      </a>
     </div>
     {% include main-menu.html %}
     {% include hamburger.html %}
   </div>
 </div>
+
+<style>
+.logo {
+  padding: 5px 0;
+}
+
+.logo-image {
+  width: 250px;  /* desktop 로고 크기 증가 */
+  height: auto;  /* 비율 유지 */
+}
+
+.logo-mobile {
+  display: none;
+}
+
+.logo-image-mobile {
+  width: 48px;  /* mobile 로고 크기 증가 */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+    padding: 10px 0;
+  }
+}
+</style>

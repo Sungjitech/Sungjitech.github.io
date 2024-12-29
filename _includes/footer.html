@@ -1,19 +1,100 @@
 <div class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <div class="footer-inner">
+      <div class="col-md-7">
+        <div class="footer-info">
           <h2 class="footer-title">{{site.title}}</h2>
-          <ul>
-            {% assign footermenu = site.data.menus.footer | sort: 'weight'  %}
-            {% for item in footermenu %}
-            <li class="{% if item.url == page.url %}active{% endif %}">
-              <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-            </li>
-            {% endfor %}
+          <div class="company-details">
+            <span>주소) 경기 남양주시 진접읍 금강로 1881</span>
+            <div></div>
+            <span class="divider">|</span>
+            <span>T) 031-571-7104~7106</span>
+            <div></div>
+            <span class="divider">|</span>
+            <span>E) sjt@sungjitech.co.kr</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="footer-links">
+          <br>
+            <li><a href="/services/overview/">회사소개</a></li>
+            <li><a href="/terms">이용약관</a></li>
+            <li><a href="/privacy">개인정보처리방침</a></li>
+            <li><a href="/email-policy">이메일무단수집거부</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+.footer {
+  padding: 20px 0;
+  background-color: #01366f;
+}
+
+.footer-info {
+  padding: 10px 0;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.company-details {
+  font-size: 0.9rem;
+  color: #a3a3a3;
+  line-height: 1.6;
+}
+
+.company-details .divider {
+  margin: 0 8px;
+  color: #a3a3a3;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #a3a3a3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .company-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .company-details .divider {
+    display: none;
+  }
+  
+  .footer-links ul {
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+}
+</style>

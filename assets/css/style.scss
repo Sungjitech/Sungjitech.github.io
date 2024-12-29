@@ -2,8 +2,9 @@
 ---
 @use "sass:math";
 // Colors
-$primary: #e5261f;
-$primary-dark: #a01b16;
+$primary: #ffffff;
+$primary_2: #000000;
+$primary-dark: #1560b1;
 $secondary: #f88379;
 $black: #2f2f41;
 $white: #ffffff;
@@ -11,7 +12,7 @@ $white-offset: #fff6f8;
 $steel: #5c5a5a;
 
 // Links
-$link-color: $primary;
+$link-color: $primary_2;
 $link-decoration: none;
 $link-hover-color: lighten($primary, 10%);
 $link-hover-decoration: underline;
@@ -21,9 +22,9 @@ $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
 $font-family-heading: "Playfair Display", serif, -apple-system;
 
 // Footer
-$footer-background-color: $primary;
+$footer-background-color: $primary_2;
 $footer-text-color: $white;
-$sub-footer-background-color: darken($primary, 10%);
+$sub-footer-background-color: darken($primary_2, 10%);
 $sub-footer-text-color: $white;
 
 // Bootstrap 5.3.2
@@ -51,11 +52,11 @@ $sub-footer-text-color: $white;
 @import "bootstrap/tables";
 @import "bootstrap/forms";
 // @import "bootstrap/buttons";
-// @import "bootstrap/transitions";
-// @import "bootstrap/dropdown";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
 // @import "bootstrap/button-group";
-// @import "bootstrap/nav";
-// @import "bootstrap/navbar";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
 // @import "bootstrap/card";
 // @import "bootstrap/accordion";
 // @import "bootstrap/breadcrumb";

@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12">
+      <h1 class="title">공지사항</h1>
+      <div class="announcement-list">
+        {% assign announcements = site.announcements | sort: 'date' | reverse %}
+        {% for announcement in announcements %}
+        <div class="announcement-item">
+          <h2 class="announcement-title">
+            <a href="{{ announcement.url }}">{{ announcement.title }}</a>
+          </h2>
+          <div class="announcement-meta">
+            <span class="date">{{ announcement.date | date: "%Y-%m-%d" }}</span>
+            {% if announcement.author %}
+            <span class="author">작성자: {{ announcement.author }}</span>
+            {% endif %}
+          </div>
+          <div class="announcement-excerpt">
+            {{ announcement.excerpt | truncate: 160 }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.announcement-list {
+  margin-top: 20px;
+}
+
+.announcement-item {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.announcement-item:hover {
+  transform: translateY(-2px);
+}
+
+.announcement-title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.announcement-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.announcement-title a:hover {
+  color: #0056b3;
+}
+
+.announcement-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.announcement-meta span {
+  margin-right: 20px;
+}
+
+.announcement-excerpt {
+  color: #666;
+  margin-top: 10px;
+}
+</style>

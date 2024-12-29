@@ -1,16 +1,50 @@
 main:
-  - name: "Services"
+  - name: "회사 소개"
     url: "/services/"
     weight: 2
-  - name: "Team"
+    submenu:
+      - name: "회사 개요"
+        url: "/services/overview/"
+      - name: "경영 방침"
+        url: "/services/management/"
+      - name: "회사 연혁"
+        url: "/services/history/"
+      - name: "CEO 인사말"
+        url: "/services/salutation/"
+      - name: "오시는 길"
+        url: "/services/location/"
+  - name: "제품 소개"
     url: "/team/"
     weight: 3
-  - name: "About"
+    submenu:
+      - name: "생산 제품"
+        url: "/team/product/"
+      - name: "인증 현황"
+        url: "/team/certification/"
+  - name: "제조 공정"
     url: "/about/"
     weight: 4
-  - name: "Contact"
+    submenu:
+      - name: "공정 흐름"
+        url: "/about/process/"
+      - name: "제조 설비"
+        url: "/about/manufacturing/"
+      - name: "검사 설비"
+        url: "/about/inspection/"
+      - name: "품질 활동"
+        url: "/about/quality/"
+  - name: "고객센터"
     url: "/contact/"
-    weight: 5
+    weight: 4
+    submenu:
+      - name: "인터뷰 기사"
+        url: "/contact/interview/"
+      - name: "사내 활동"
+        url: "/contact/in_house/"
+      - name: "회사 내부"
+        url: "/contact/inside/"
+      - name: "공지 사항"
+        url: "/announcements/announcements/"
 
 footer:
   - name: "Home"

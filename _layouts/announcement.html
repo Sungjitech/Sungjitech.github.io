@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <div class="announcement announcement-single">
+        <h1 class="title">{{page.title}}</h1>
+        <div class="announcement-meta">
+          <span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
+          {% if page.author %}
+          <span class="author">작성자: {{ page.author }}</span>
+          {% endif %}
+        </div>
+        <div class="content">
+          {{content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.announcement-single {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.announcement-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.announcement-meta span {
+  margin-right: 20px;
+}
+</style>

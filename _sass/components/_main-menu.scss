@@ -10,6 +10,8 @@
     > li {
       list-style: none;
       font-size: 1rem;
+      position: relative;  // 드롭다운 위치를 위해 추가
+      
       > a {
         padding: 10px 12px 10px 12px;
         display: inline-block;
@@ -20,6 +22,45 @@
           text-decoration: underline;
         }
       }
+      
+      // 드롭다운 메뉴 스타일
+      &.has-dropdown {
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          min-width: 200px;
+          background: $white;
+          border: 1px solid rgba(0,0,0,0.1);
+          border-radius: 4px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          padding: 0.5rem 0;
+          
+          li {
+            list-style: none;
+            
+            a {
+              padding: 0.5rem 1rem;
+              display: block;
+              color: $primary_2;
+              text-decoration: none;
+              
+              &:hover {
+                background: rgba($primary, 0.1);
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        
+        &:hover {
+          .dropdown-menu {
+            display: block;
+          }
+        }
+      }
+      
       &.active {
         > a {
           font-weight: bold;

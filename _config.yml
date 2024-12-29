@@ -1,9 +1,9 @@
 baseurl: '/'
 permalink: pretty
-title: 'Jekyll Serif'
+title: '(주)성지테크'
 
 logo:
-  mobile: "images/logo/logo-mobile.svg"
+  mobile: "images/logo/logo-mobile.png"
   mobile_height: "32px"
   mobile_width: "32px"
   desktop: "images/logo/logo.svg"
@@ -19,6 +19,13 @@ collections:
     sort_by: weight
   team:
     output: true
+  about:
+    output: true
+  contact:
+    output: true
+  announcements:
+    output: true
+    sort_by: date
 
 defaults:
   - scope:
@@ -31,6 +38,21 @@ defaults:
       type: "team"
     values:
       layout: "team"
+  - scope:
+      path: ""
+      type: "about"
+    values:
+      layout: "about"
+  - scope:
+      path: ""
+      type: "contact"
+    values:
+      layout: "contact"
+  - scope:
+      path: ""
+      type: "announcements"
+    values:
+      layout: "announcement"
 
 sass:
   style: compressed # possible values: nested expanded compact compressed

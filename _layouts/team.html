@@ -3,13 +3,96 @@ layout: default
 bodyClass: "page-team"
 ---
 
+
 <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-  <div class="row justify-content-start">
+  <div class="row justify-content-between">
+    <!-- Main Content -->
     <div class="col-12 col-md-8">
-      <div class="team team-single">
-        <h1 class="title">{{page.title}}</h1>
+      <div class="service service-single">
         <div class="content">{{content}}</div>
+      </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div class="col-12 col-md-3">
+      <div class="sidebar">
+        <div class="sidebar-menu">
+          <div class="menu-section">
+            <div class="menu-title">제품소개</div>
+            <div class="menu-items">
+              <a href="/team/product/" class="menu-item">생산 제품</a>
+              <a href="/team/certification/" class="menu-item">인증 현황</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+.sidebar {
+  background: #123459;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar-menu {
+  padding: 15px;
+}
+
+.menu-section {
+  margin-bottom: 15px;
+}
+
+.menu-title {
+  padding: 10px;
+  background-color: #dbdbdb;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.menu-items {
+  padding: 5px;
+}
+
+.menu-item {
+  display: block;
+  padding: 8px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #f8f9fa;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Active state for current page */
+.menu-item.active {
+  background-color: #e9ecef;
+  color: #333;
+  font-weight: 500;
+}
+</style>
+
+<script>
+// 현재 페이지의 메뉴 아이템을 활성화
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPath = window.location.pathname;
+  const menuItems = document.querySelectorAll('.menu-item');
+  
+  menuItems.forEach(item => {
+    if (item.getAttribute('href') === currentPath) {
+      item.classList.add('active');
+    }
+  });
+});
+</script>
