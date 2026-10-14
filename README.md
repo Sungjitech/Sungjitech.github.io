@@ -1,103 +1,49 @@
-# Jekyll Serif Theme
+# (주)성지테크 홈페이지
 
-Serif is a modern business theme for Jekyll. It contains multiple content types for a typical brochure/marketing website. The theme is fully responsive, blazing fast and artfully illustrated.
+www.sungjitech.co.kr — Next.js(정적 내보내기)로 만든 회사 홈페이지입니다. GitHub Pages로 배포합니다.
 
-[Live Demo](https://jekyll-serif.netlify.app/) |
-[Zerostatic Themes](https://www.zerostatic.io)
+## 실행
 
-<a href="https://www.buymeacoffee.com/zerostatic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+Node.js 20.9 이상이 필요합니다.
 
-![Jekyll Serif Theme screenshot](https://www.zerostatic.io/theme/jekyll-serif/jekyll-serif-screenshot.png)
-
-### Theme features
-
-- Jekyll 4.2+
-- Netlify & Github Pages ready
-- Services (Collection)
-- Team (Collection)
-- Features (Data)
-- SCSS
-- 100% Responsive design, animated hamburger and mobile slide in menu
-- Bootstrap 4.6 - _Only the bootstrap grid and utilites are imported by default. If you want to use more of the Boostrap library you can uncomment the `@import` in `style.scss`_
-- 100/100 Google Lighthouse speed score
-- 100/100 Google Lighthouse seo score
-- 100/100 Google Lighthouse accessibility score
-- 100/100 Google Lighthouse best practices score
-- Under 50KB without images or 80KB with images and illustrations ⚡
-- Under 20KB without Google fonts ⚡⚡⚡
-- Robust example content included
-- Royalty free illustrations included
-
-## Installation
-
-### Installing Ruby & Jekyll
-
-If this is your first time using Jekyll, please follow the [Jekyll docs](https://jekyllrb.com/docs/installation/) and make sure your local environment (including Ruby) is setup correctly.
-
-### Installing Theme
-
-Download or clone the theme.
-
-To run the theme locally, navigate to the theme directory and run:
-
-```
-bundle install
+```bash
+npm install
+npm run dev      # 개발 서버 http://localhost:3000
+npm run build    # 정적 사이트를 out/ 에 생성
+npm run preview  # 빌드 결과 미리보기 http://localhost:4173
 ```
 
-To start the Jekyll local development server.
+## 내용 고치기
 
+글과 수치는 모두 `lib/` 안의 파일에 모여 있습니다. 페이지 코드를 건드리지 않고 이 파일만 고치면 됩니다.
+
+| 바꿀 내용 | 파일 |
+| --- | --- |
+| 주소·전화·팩스·이메일·대표자 | `lib/site.ts` |
+| 인사말, 사훈·경영방침·품질목표, 조직도 | `lib/content/company.ts` |
+| 연혁 | `lib/content/history.ts` |
+| 제품(이름·설명·재질) | `lib/content/products.ts` |
+| 공정, 제조설비, 검사설비 | `lib/content/production.ts` |
+| 인증서, 수상, 품질 활동 | `lib/content/quality.ts` |
+| 언론보도, 회사 둘러보기 사진 | `lib/content/media.ts` |
+| 상단 메뉴 | `lib/navigation.ts` |
+
+## 사진
+
+`assets/source/`에는 회사소개서 슬라이드 캡처 원본이 있고, `scripts/build-images.mjs`가 여기서 사진 부분만 잘라 `public/images/`에 WebP로 저장합니다.
+
+```bash
+npm run images              # 전체 다시 생성
+npm run images -- certs     # 이름이 certs로 시작하는 것만
 ```
-bundle exec jekyll serve
-```
 
-To build the theme.
+- 새 사진(예: 새 인증서)은 `public/images/` 아래에 넣고 `lib/content/` 파일에서 경로를 바꾼 뒤 `npm run images -- brand`를 한 번 실행하세요. 이미지 크기 목록(`lib/image-sizes.json`)이 갱신됩니다.
+- 원본 사진 파일이 생기면 슬라이드 캡처 대신 그것을 쓰는 편이 화질이 훨씬 좋습니다.
 
-```
-bundle exec jekyll build
-```
+## 배포
 
-## Deployment
+`master`에 push하면 GitHub Actions(`.github/workflows/deploy.yml`)가 빌드해 GitHub Pages에 올립니다.
 
-### Netlify
+처음 한 번은 저장소 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 바꿔야 합니다. 사용자 지정 도메인(`www.sungjitech.co.kr`)은 같은 화면의 Custom domain 설정을 그대로 씁니다.
 
-Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/jekyll-serif-theme)
-
-### Github Pages
-
-This theme has been tested to work with Github Pages (and Github Project Pages). When using Github Pages you will need to update the `baseurl` in the `_config.yml` otherwise all the css, images and paths will be broken.
-
-For example the site https://zerostaticthemes.github.io/jekyll-serif-theme would have `baseurl: "/jekyll-serif-theme/"`
-
-## Extras
-
-### License
-
-- You cannot create ports of this theme
-- You cannot re-sell this theme
-
-### Credits
-
-- Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
-- Stock images by Unsplash - https://unsplash.com/
-- Feature icons by Noun Project - https://thenounproject.com/
-
-## Support My Work
-
-I've been building open source themes for all the main static site generators for over 4 years now. My premium themes allow me to continue to allocate time to maintain, improve and build new open source themes.
-
-1. Leave a star ⭐🙏🏻
-2. Make a contribution to this theme, add a feature, fix a bug, nothing is to small 
-2. Mention this theme on twitter [@zerostaticio](https://twitter.com/zerostaticio) 📢
-3. Purchase a premium theme 🔥
-
-### All Jekyll Themes by Zerostatic
-
-- [Jekyll Serif (Open Source)](https://www.zerostatic.io/theme/jekyll-serif/)
-- [Jekyll Atlantic (Open Source)](https://www.zerostatic.io/theme/jekyll-atlantic/)
-- [Jekyll Advance (Premium)](https://www.zerostatic.io/theme/jekyll-advance/)
-- [Jekyll Origin (Premium)](https://www.zerostatic.io/theme/jekyll-origin/)
-- [Jekyll Curate (Premium)](https://www.zerostatic.io/theme/jekyll-curate/)
-
-🇦🇺 **Made in Australia** by Robert Austin
+예전 사이트 주소(`/services/overview/` 등)로 들어오면 새 페이지로 자동 이동합니다(`lib/redirects.ts`).
