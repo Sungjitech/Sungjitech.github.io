@@ -1864,52 +1864,21 @@ table {
 }
 
 .org-ceo {
+  position: relative;
   width: 240px;
   margin: 0 auto;
   background: var(--navy-800);
   color: #fff;
 }
 
-.org-upper {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 240px 1fr;
-  align-items: start;
-}
-
 /* 대표이사 상자 아래에서 상무이사 상자 위까지 */
-.org-upper::before {
+.org-ceo::after {
   content: "";
   position: absolute;
   left: 50%;
-  top: 60px;
-  bottom: -56px;
+  top: 100%;
+  height: 56px;
   border-left: 1px solid var(--org-line);
-}
-
-.org-upper .org-ceo {
-  grid-column: 2;
-}
-
-.org-direct {
-  position: relative;
-  grid-column: 3;
-  display: flex;
-  align-items: center;
-  padding-left: 48px;
-}
-
-.org-direct::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 30px;
-  width: 48px;
-  border-top: 1px dashed var(--accent);
-}
-
-.org-direct .org-unit {
-  width: 220px;
 }
 
 .org-exec {
@@ -1982,15 +1951,6 @@ table {
   border-bottom: 0;
 }
 
-.org-direct .org-unit-name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
-  padding: 0 14px;
-  background: var(--accent-soft);
-}
-
 .org-unit ul {
   padding: 16px 12px 18px;
   text-align: center;
@@ -1999,52 +1959,19 @@ table {
   color: var(--ink-2);
 }
 
-.org-note {
-  margin-top: 28px;
-  font-size: 14.5px;
-  color: var(--ink-3);
-}
-
-.org-note span {
-  display: inline-block;
-  width: 22px;
-  margin-right: 8px;
-  vertical-align: middle;
-  border-top: 1px dashed var(--accent);
-}
-
 @media (max-width: 1023px) {
-  .org-upper {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .org-upper::before {
-    display: none;
-  }
-  .org-upper .org-ceo {
-    grid-column: 1;
-  }
-  .org-direct {
-    grid-column: 1;
-    justify-content: center;
-    padding-left: 0;
-  }
-  .org-direct::before {
-    display: none;
-  }
   .org-exec {
     margin-top: 24px;
   }
   .org-units {
     grid-template-columns: 1fr 1fr;
-  }
-  .org-units::before,
-  .org-units .org-unit::before,
-  .org-exec::after {
-    display: none;
-  }
-  .org-units {
     margin-top: 24px;
+  }
+  .org-ceo::after,
+  .org-exec::after,
+  .org-units::before,
+  .org-units .org-unit::before {
+    display: none;
   }
   /* 2열에서 마지막 부서가 홀로 남으면 가운데에 둔다 */
   .org-units .org-unit:last-child:nth-child(odd) {
@@ -2056,8 +1983,7 @@ table {
 
 @media (max-width: 559px) {
   .org-ceo,
-  .org-exec,
-  .org-direct .org-unit {
+  .org-exec {
     width: 100%;
   }
   .org-units {

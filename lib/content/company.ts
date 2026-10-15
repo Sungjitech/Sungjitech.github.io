@@ -29,12 +29,11 @@ export type OrgUnit = { name: string; roles: string[] };
 
 export const ORG = {
   ceo: "대표이사",
-  direct: { name: "품질부", roles: ["품질인증", "품질관리", "품질기획"] } as OrgUnit,
   executive: "상무이사",
   units: [
     { name: "영업부", roles: ["영업", "출하"] },
-    { name: "생산부", roles: ["생산 1과 (프레스)", "생산 2과 (웨이브)"] },
-    { name: "금형부", roles: ["금형관리"] },
+    { name: "생산부", roles: ["생산 1과 (프레스)", "생산 2과 (웨이브)", "금형관리"] },
+    { name: "품질부", roles: ["품질인증", "품질관리", "품질기획"] },
     { name: "관리부", roles: ["회계", "품질"] },
     { name: "연구전담부", roles: [] },
   ] as OrgUnit[],

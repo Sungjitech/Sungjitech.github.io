@@ -62,7 +62,7 @@ export default function AssurancePage() {
         section="quality"
         current="/quality/assurance/"
         title="품질보증"
-        lead="품질부를 대표이사 직속으로 두고, 원자재 입고부터 출하까지 네 단계로 검사합니다."
+        lead="원자재 입고부터 출하까지 네 단계로 검사합니다."
       />
       <div className="container page-body">
         <section className="block">

@@ -143,8 +143,8 @@ export default function HomePage() {
               </li>
               <li className="point-item">
                 <span className="point-num">03</span>
-                <h3 className="point-title">대표이사 직속 품질부</h3>
-                <p className="point-text">품질부가 대표이사 직속으로 품질인증·품질관리·품질기획을 맡습니다.</p>
+                <h3 className="point-title">품질 전담 부서</h3>
+                <p className="point-text">품질부가 품질인증·품질관리·품질기획을 맡습니다.</p>
               </li>
               <li className="point-item">
                 <span className="point-num">04</span>
