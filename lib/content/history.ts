@@ -8,6 +8,8 @@ export const HISTORY: HistoryEra[] = [
     title: "성장기",
     period: "2014 – 현재",
     years: [
+      { year: "2026", items: [{ date: "01.22", text: "SQ 인증 갱신 (현대자동차·기아, 주관 (주)진합)" }] },
+      { year: "2025", items: [{ date: "11.28", text: "품질경영시스템 ISO 9001 인증 갱신", org: "한국생산성본부인증원" }] },
       {
         year: "2024",
         items: [

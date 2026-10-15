@@ -47,24 +47,6 @@ export const CERTIFICATES: Certificate[] = [
     image: "/images/certs/iso45001.webp",
   },
   {
-    slug: "root-industry",
-    title: "뿌리기업",
-    scope: "소성가공 · 주요 생산품 와셔류",
-    issuer: "국가뿌리산업진흥센터",
-    number: "21212-11720",
-    since: "2016년 최초 선정",
-    image: "/images/certs/root-industry.webp",
-  },
-  {
-    slug: "clean",
-    title: "CLEAN 사업장",
-    scope: "안전하고 쾌적한 사업장 인정",
-    issuer: "고용노동부 · 한국산업안전보건공단",
-    number: "제7,276호",
-    since: "2004년 최초 인정",
-    image: "/images/certs/clean.webp",
-  },
-  {
     slug: "zero-accident",
     title: "무재해 4배 달성",
     scope: "무재해 1,661일 (2012.11.29 – 2018.06.14)",
@@ -72,15 +54,6 @@ export const CERTIFICATES: Certificate[] = [
     number: "제2018001198호",
     since: "2018년 인증",
     image: "/images/certs/zero-accident.webp",
-  },
-  {
-    slug: "risk-assessment",
-    title: "위험성평가 인정",
-    scope: "위험성평가 우수사업장",
-    issuer: "한국산업안전보건공단",
-    number: "제17-24-A-159호",
-    since: "2014년 최초 인정",
-    image: "/images/certs/risk-assessment.webp",
   },
 ];
 

@@ -8,7 +8,7 @@ import { AWARDS, CERTIFICATES } from "@/lib/content/quality";
 export const metadata: Metadata = {
   title: "인증·수상",
   description:
-    "KS 제품인증(평와셔 KS B 1326), 현대자동차·기아 SQ 인증, ISO 9001, ISO 45001, 뿌리기업 등 인증 현황과 대외 수상.",
+    "KS 제품인증(평와셔 KS B 1326), 현대자동차·기아 SQ 인증, ISO 9001, ISO 45001 등 인증 현황과 대외 수상.",
   alternates: { canonical: "/quality/certifications/" },
 };
 

@@ -97,14 +97,12 @@ const jobs = [
 
   // 인증서 (고해상도 슬라이드)
   job("team/certification_1.png", "certs/ks", [160, 268, 878, 1250], { width: 900 }),
-  job("team/certification_1.png", "certs/sq", [1140, 280, 1812, 1242], { width: 900 }),
-  job("team/certification_2.png", "certs/iso9001", [128, 274, 844, 1265], { width: 900 }),
-  job("team/certification_2.png", "certs/iso45001", [1139, 275, 1857, 1267], { width: 900 }),
-  // 대표자 생년월일 칸은 개인정보라 가린다.
-  job("team/certification_3.png", "certs/root-industry", [121, 280, 870, 1291], { width: 900, redact: [[608, 447, 779, 489]] }),
-  job("team/certification_3.png", "certs/clean", [1180, 284, 1931, 1295], { width: 900 }),
   job("team/certification_4.png", "certs/zero-accident", [45, 97, 322, 497], { scale: 2 }),
-  job("team/certification_4.png", "certs/risk-assessment", [425, 101, 725, 493], { scale: 2 }),
+  // 인증서 원본 PDF(assets/source/certification/*.pdf)를 PNG로 바꾼 것.
+  // pdftoppm -r 200 -singlefile 로 렌더링. ISO는 스캔 가장자리 얼룩을, SQ는 바깥 검은 테두리를 피해 안쪽을 자른다.
+  job("certification/sq.png", "certs/sq", [58, 85, 1596, 2282], { width: 900 }),
+  job("certification/iso9001.png", "certs/iso9001", [10, 10, 1644, 2329], { width: 900 }),
+  job("certification/iso45001.png", "certs/iso45001", [10, 10, 1644, 2329], { width: 900 }),
 
   // 수상
   job("team/certification_5.png", "awards/productivity-2016", [18, 110, 156, 306], { scale: 2 }),
