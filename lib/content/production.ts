@@ -63,38 +63,30 @@ export const PROCESS_LINES: ProcessLine[] = [
   },
 ];
 
-export const PRESS_MACHINES = [
-  { spec: "200 ton", count: 1 },
-  { spec: "110 ton", count: 3 },
-  { spec: "80 ton", count: 6 },
-  { spec: "45 ton", count: 1 },
-];
+export const PRESS_CAPACITIES = ["200 ton", "110 ton", "80 ton", "45 ton"];
 
-export const BARREL_MACHINES = [
-  { spec: "700 kg", count: 2 },
-  { spec: "500 kg", count: 2 },
-];
+export const BARREL_CAPACITIES = ["700 kg", "500 kg"];
 
-export type Instrument = { name: string; spec: string; count: number; use: string };
+export type Instrument = { name: string; spec: string; use: string };
 
 export const TEST_EQUIPMENT: Instrument[] = [
-  { name: "비커스 경도기", spec: "Akashi MVK-H100, ×400", count: 1, use: "경도 측정 · 조직 시험" },
-  { name: "로크웰 경도기", spec: "Akashi, HRC68 · HRB100 (0.1)", count: 1, use: "경도 측정" },
-  { name: "마운팅 프레스", spec: "HAR-M-31", count: 1, use: "시편 제작" },
-  { name: "폴리싱기", spec: "HAR-P-200", count: 1, use: "시편 연마" },
-  { name: "커팅기", spec: "HAR-C-250", count: 1, use: "시편 절단" },
-  { name: "하중 시험기", spec: "—", count: 1, use: "크랙 시험" },
+  { name: "비커스 경도기", spec: "Akashi MVK-H100, ×400", use: "경도 측정 · 조직 시험" },
+  { name: "로크웰 경도기", spec: "Akashi, HRC68 · HRB100 (0.1)", use: "경도 측정" },
+  { name: "마운팅 프레스", spec: "HAR-M-31", use: "시편 제작" },
+  { name: "폴리싱기", spec: "HAR-P-200", use: "시편 연마" },
+  { name: "커팅기", spec: "HAR-C-250", use: "시편 절단" },
+  { name: "하중 시험기", spec: "—", use: "크랙 시험" },
 ];
 
 export const MEASURING_EQUIPMENT: Instrument[] = [
-  { name: "비디오 측정기", spec: "VDM00128G", count: 1, use: "형상 측정" },
-  { name: "하이트 게이지", spec: "0–300 mm (0.01)", count: 1, use: "치수 측정" },
-  { name: "내·외측 캘리퍼스", spec: "0–150 mm (0.01)", count: 5, use: "치수 측정" },
-  { name: "외측 마이크로미터", spec: "0–25 mm (0.01)", count: 1, use: "치수 측정" },
-  { name: "포인트 마이크로미터", spec: "0–25 mm (0.01)", count: 1, use: "치수 측정" },
-  { name: "디지털 현미경", spec: "AM311S (10×–200×)", count: 1, use: "외관 검사" },
-  { name: "회전 속도계", spec: "ASAHI (1,000 rpm)", count: 1, use: "RPM 측정" },
-  { name: "롤러 선별기", spec: "2 Roller", count: 2, use: "선별" },
+  { name: "비디오 측정기", spec: "VDM00128G", use: "형상 측정" },
+  { name: "하이트 게이지", spec: "0–300 mm (0.01)", use: "치수 측정" },
+  { name: "내·외측 캘리퍼스", spec: "0–150 mm (0.01)", use: "치수 측정" },
+  { name: "외측 마이크로미터", spec: "0–25 mm (0.01)", use: "치수 측정" },
+  { name: "포인트 마이크로미터", spec: "0–25 mm (0.01)", use: "치수 측정" },
+  { name: "디지털 현미경", spec: "AM311S (10×–200×)", use: "외관 검사" },
+  { name: "회전 속도계", spec: "ASAHI (1,000 rpm)", use: "RPM 측정" },
+  { name: "롤러 선별기", spec: "2 Roller", use: "선별" },
 ];
 
 // 사진 속 장비가 무엇인지 분명한 것만 이름을 붙인다.

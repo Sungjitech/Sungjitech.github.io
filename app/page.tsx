@@ -51,18 +51,18 @@ export default function HomePage() {
               <dd className="facts-label">1998년 평와셔 KS 인증</dd>
             </div>
             <div className="facts-item">
-              <dt className="sr-only">생산설비</dt>
+              <dt className="sr-only">프레스 설비</dt>
               <dd className="facts-value tnum">
-                15<small>대</small>
+                45~200<small>톤</small>
               </dd>
-              <dd className="facts-label">프레스 11 · 바렐 4</dd>
+              <dd className="facts-label">용량별 프레스 설비</dd>
             </div>
             <div className="facts-item">
-              <dt className="sr-only">시험·측정 장비</dt>
+              <dt className="sr-only">설비 자동화</dt>
               <dd className="facts-value tnum">
-                19<small>대</small>
+                100<small>%</small>
               </dd>
-              <dd className="facts-label">시험·측정 장비</dd>
+              <dd className="facts-label">설비 자동화</dd>
             </div>
           </dl>
         </div>

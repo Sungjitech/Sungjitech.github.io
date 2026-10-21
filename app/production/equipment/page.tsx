@@ -3,11 +3,11 @@ import PageHeader from "@/components/PageHeader";
 import Img from "@/components/Img";
 import LightboxGroup, { LbButton } from "@/components/Lightbox";
 import { ZoomIcon } from "@/components/Icons";
-import { BARREL_MACHINES, PRESS_MACHINES } from "@/lib/content/production";
+import { BARREL_CAPACITIES, PRESS_CAPACITIES } from "@/lib/content/production";
 
 export const metadata: Metadata = {
   title: "제조설비",
-  description: "프레스 11대(200·110·80·45톤)와 바렐 4대(700·500kg) 등 (주)성지테크의 주요 제조설비.",
+  description: "200·110·80·45톤 프레스와 700·500kg 바렐 등 (주)성지테크의 주요 제조설비.",
   alternates: { canonical: "/production/equipment/" },
 };
 
@@ -19,41 +19,36 @@ const PHOTOS = [
   { src: "/images/equipment/barrel.webp", alt: "바렐 연마기" },
 ];
 
-const sum = (rows: { count: number }[]) => rows.reduce((n, r) => n + r.count, 0);
-
 export default function EquipmentPage() {
-  const pressTotal = sum(PRESS_MACHINES);
-  const barrelTotal = sum(BARREL_MACHINES);
-
   return (
     <>
       <PageHeader
         section="production"
         current="/production/equipment/"
         title="제조설비"
-        lead="45톤부터 200톤까지 프레스 11대로 타발·성형하고, 바렐 4대로 표면과 이물을 정리합니다."
+        lead="45톤부터 200톤까지 용량별 프레스로 타발·성형하고, 바렐 가공으로 표면과 이물을 정리합니다."
       />
       <div className="container page-body">
         <dl className="stat-row">
           <div className="stat">
-            <dt className="stat-label">프레스</dt>
+            <dt className="stat-label">프레스 용량</dt>
             <dd className="stat-value tnum">
-              {pressTotal}
-              <small>대</small>
+              45~200
+              <small>톤</small>
             </dd>
           </div>
           <div className="stat">
-            <dt className="stat-label">바렐</dt>
+            <dt className="stat-label">바렐 용량</dt>
             <dd className="stat-value tnum">
-              {barrelTotal}
-              <small>대</small>
+              500~700
+              <small>kg</small>
             </dd>
           </div>
           <div className="stat">
-            <dt className="stat-label">합계</dt>
+            <dt className="stat-label">설비 자동화</dt>
             <dd className="stat-value tnum">
-              {pressTotal + barrelTotal}
-              <small>대</small>
+              100
+              <small>%</small>
             </dd>
           </div>
         </dl>
@@ -67,43 +62,30 @@ export default function EquipmentPage() {
                   <tr>
                     <th scope="col">설비명</th>
                     <th scope="col">용량</th>
-                    <th scope="col" className="num">
-                      대수
-                    </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {PRESS_MACHINES.map((m, i) => (
-                    <tr key={m.spec}>
+                  {PRESS_CAPACITIES.map((spec, i) => (
+                    <tr key={spec}>
                       {i === 0 && (
-                        <th scope="rowgroup" rowSpan={PRESS_MACHINES.length}>
+                        <th scope="rowgroup" rowSpan={PRESS_CAPACITIES.length}>
                           프레스
                         </th>
                       )}
-                      <td>{m.spec}</td>
-                      <td className="num">{m.count}</td>
+                      <td>{spec}</td>
                     </tr>
                   ))}
-                  {BARREL_MACHINES.map((m, i) => (
-                    <tr key={m.spec}>
+                  {BARREL_CAPACITIES.map((spec, i) => (
+                    <tr key={spec}>
                       {i === 0 && (
-                        <th scope="rowgroup" rowSpan={BARREL_MACHINES.length}>
+                        <th scope="rowgroup" rowSpan={BARREL_CAPACITIES.length}>
                           바렐
                         </th>
                       )}
-                      <td>{m.spec}</td>
-                      <td className="num">{m.count}</td>
+                      <td>{spec}</td>
                     </tr>
                   ))}
                 </tbody>
-                <tfoot>
-                  <tr>
-                    <th scope="row" colSpan={2}>
-                      합계
-                    </th>
-                    <td className="num">{pressTotal + barrelTotal}</td>
-                  </tr>
-                </tfoot>
               </table>
             </div>
           </section>
