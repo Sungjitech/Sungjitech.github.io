@@ -57,13 +57,6 @@ export default function HomePage() {
               </dd>
               <dd className="facts-label">용량별 프레스 설비</dd>
             </div>
-            <div className="facts-item">
-              <dt className="sr-only">설비 자동화</dt>
-              <dd className="facts-value tnum">
-                100<small>%</small>
-              </dd>
-              <dd className="facts-label">설비 자동화</dd>
-            </div>
           </dl>
         </div>
       </section>

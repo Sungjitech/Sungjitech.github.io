@@ -44,13 +44,6 @@ export default function EquipmentPage() {
               <small>kg</small>
             </dd>
           </div>
-          <div className="stat">
-            <dt className="stat-label">설비 자동화</dt>
-            <dd className="stat-value tnum">
-              100
-              <small>%</small>
-            </dd>
-          </div>
         </dl>
 
         <div className="equipment-layout">
