@@ -3,6 +3,7 @@ import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Analytics from "@/components/Analytics";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
+        <Analytics />
       </body>
     </html>
   );

@@ -19,6 +19,8 @@ export const SITE = {
   description:
     "1992년 설립된 와셔·프레스 부품 제조기업. KS 인증 평와셔(KS B 1326), 스프링와셔, 웨이브 스프링와셔, 특수와셔, 코니칼와셔, 이링, 톱니와셔와 프레스 가공품을 생산합니다.",
   naverVerification: "f2ebf347ab02db7f4731cf1d3f8f66ee67fe7619",
+  // Google Analytics 4 측정 ID("G-"로 시작). 비워두면 방문자 통계 스크립트를 넣지 않는다.
+  gaMeasurementId: "G-WSYK0CNDZS",
 } as const;
 
 export const MAP = {
