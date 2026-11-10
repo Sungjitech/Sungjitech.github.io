@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "(주)성지테크 사옥" }],
   },
   verification: {
-    other: { "naver-site-verification": SITE.naverVerification },
+    other: { "naver-site-verification": [...SITE.naverVerification] },
   },
   formatDetection: { telephone: false },
 };
