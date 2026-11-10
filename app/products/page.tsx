@@ -6,7 +6,7 @@ import { PRESS_PARTS, WASHERS } from "@/lib/content/products";
 import { SITE, telHref } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "제품소개",
+  title: "와셔 제품 – 평와셔·스프링와셔·웨이브와셔",
   description:
     "평와셔(KS B 1326), 사각와셔, 스프링와셔, 웨이브 스프링와셔, 특수와셔, 코니칼와셔, 이링·백와셔, 톱니와셔와 프레스 가공품.",
   alternates: { canonical: "/products/" },
